@@ -1,0 +1,36 @@
+config BR2_PACKAGE_KLIPPER3D
+	bool "klipper3d"
+	
+	select BR2_PACKAGE_LIBFFI
+	select BR2_PACKAGE_LIBUSB
+	select BR2_PACKAGE_LIBUSB_DEV
+	select BR2_PACKAGE_PYTHON3
+	select BR2_PACKAGE_PYTHON_PIP
+	select BR2_PACKAGE_PYTHON_CFFI
+	select BR2_PACKAGE_PYTHON_SERIAL
+	select BR2_PACKAGE_PYTHON_GREENLET
+	select BR2_PACKAGE_PYTHON_JINJA2
+#	select BR2_PACKAGE_PYTHON_CAN
+	select BR2_PACKAGE_PYTHON_MARKUPSAFE
+#	select BR2_PACKAGE_STM32FLASH
+	select BR2_PACKAGE_BINUTILS
+	select BR2_PACKAGE_BINUTILS_TARGET
+	select BR2_PACKAGE_PKGCONF
+
+	help
+	  Klipper is a 3d-Printer firmware. It combines the power of a 
+	  general purpose computer with one or more micro-controllers.
+
+	  https://github.com/Klipper3d/klipper
+
+
+if BR2_PACKAGE_KLIPPER3D
+
+config BR2_PACKAGE_KLIPPER3D_SRC_CONFIG
+	string "Klipper MCU kconfig file"
+	default "$(BR2_EXTERNAL)/package/klipper3d/klipper_default.config"
+	help
+	  Provide a Klipper config file matching your 3D printing hardware or 
+	  run "make klipper3d-menuconfig".
+	  
+endif

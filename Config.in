@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_K3D_PATH/package/klipper3d/Config.in"
