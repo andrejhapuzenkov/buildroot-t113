@@ -91,7 +91,7 @@ sudo dd if=output/images/sdcard.img of=/dev/sdX
 ==============================================
 
 Run Putty, according to the information in the device manager, fill in the correct serial port
-COM port, baud rate 115200, click open
+COM port, baud rate 115200, click open.
 
 Connect a TTL UART to the UART3 on P2 header (unpopulated), pin PB7(RX), pin PB6(TX), insert the microSD card and
 plug in a USB-C cable to the OTG or HOST connector to boot the system.
