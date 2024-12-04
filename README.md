@@ -20,7 +20,17 @@ Board features:
 How to build
 ============
 
+$ git clone https://github.com/andrejhapuzenkov/buildroot-t113.git
+# get buildroot (skip if you have it already)
+$ git clone https://github.com/buildroot/buildroot.git
+$ cd buildroot
+#configure the external folder (do nothing, exit without saving)
+$ make BR2_EXTERNAL=../buildroot-t113 menuconfig
+# load Buildroot config
 $ make t113_defconfig
+# configure Klipper firmware
+$ make klipper3d-menuconfig
+# build everything
 $ make
 
 Wifi
