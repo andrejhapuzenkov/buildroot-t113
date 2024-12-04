@@ -19,12 +19,14 @@ Board features:
 
 How to build
 ============
+
+# get custom projeck
 ```bash
 $ git clone https://github.com/andrejhapuzenkov/buildroot-t113.git
 ```
 
-```bash
 # get buildroot (skip if you have it already)
+```bash
 $ git clone https://github.com/buildroot/buildroot.git
 ```
 
@@ -33,16 +35,24 @@ $ cd buildroot
 ```
 
 #configure the external folder (do nothing, exit without saving)
+```bash
 $ make BR2_EXTERNAL=../buildroot-t113 menuconfig
+```
 
 #load Buildroot config
+```bash
 $ make t113_defconfig
+```
 
 #configure Klipper firmware
+```bash
 $ make klipper3d-menuconfig
+```
 
 #build everything
+```bash
 $ make
+```
 
 Wifi
 ==========
