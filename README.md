@@ -21,7 +21,7 @@ How to build
 ============
 
 ```bash
-# get custom projeck
+# get custom project
 git clone https://github.com/andrejhapuzenkov/buildroot-t113.git
 ```
 
