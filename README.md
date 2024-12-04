@@ -71,7 +71,9 @@ in the output/images/ directory.
 
 Copy the bootable "sdcard.img" onto an SD card with "dd":
 
-$ sudo dd if=output/images/sdcard.img of=/dev/sdX
+```bash
+sudo dd if=output/images/sdcard.img of=/dev/sdX
+```
 
 Connect a TTL UART to the UART3 on P8 header (unpopulated), insert the microSD card and
 plug in a USB-C cable to the OTG or HOST connector to boot the system.
