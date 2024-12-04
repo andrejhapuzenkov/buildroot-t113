@@ -1,4 +1,4 @@
-LCPI-PC T113s3
+## LCPI-PC T113s3
 ===============
 
 LCPI-PC T113s3 is a tiny ARM Cortex-A7 based single board computer.
@@ -17,7 +17,7 @@ Board features:
 - onboard audio amplifier
 - FEL,reset button
 
-How to build
+## How to build
 ============
 
 ```bash
@@ -54,7 +54,7 @@ make klipper3d-menuconfig
 make
 ```
 
-Wifi
+## Wifi
 ==========
 
 Edit board/lcpi/t113/overlay/etc/wpa_supplicant.conf or
@@ -63,7 +63,7 @@ Edit board/lcpi/t113/overlay/etc/wpa_supplicant.conf or
 * Replace YOURSSID with your AP ssid
 * Replace YOURPASSWD with your AP password
 
-How to write the SD card
+## How to write the SD card
 ========================
 
 Once the build process is finished you will have an image called "sdcard.img"
@@ -71,7 +71,7 @@ in the output/images/ directory.
 
 Copy the bootable "sdcard.img" onto an SD card with "dd":
 
-  $ sudo dd if=output/images/sdcard.img of=/dev/sdX
+$ sudo dd if=output/images/sdcard.img of=/dev/sdX
 
 Connect a TTL UART to the UART3 on P8 header (unpopulated), insert the microSD card and
 plug in a USB-C cable to the OTG or HOST connector to boot the system.
