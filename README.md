@@ -22,36 +22,36 @@ How to build
 
 ```bash
 # get custom projeck
-$ git clone https://github.com/andrejhapuzenkov/buildroot-t113.git
+git clone https://github.com/andrejhapuzenkov/buildroot-t113.git
 ```
 
 ```bash
 # get buildroot (skip if you have it already)
-$ git clone https://github.com/buildroot/buildroot.git
+git clone https://github.com/buildroot/buildroot.git
 ```
 
 ```bash
-$ cd buildroot
+cd buildroot
 ```
 
 ```bash
 # configure the external folder (do nothing, exit without saving)
-$ make BR2_EXTERNAL=../buildroot-t113 menuconfig
+make BR2_EXTERNAL=../buildroot-t113 menuconfig
 ```
 
 ```bash
 # load Buildroot config
-$ make t113_defconfig
+make t113_defconfig
 ```
 
 ```bash
 # configure Klipper firmware
-$ make klipper3d-menuconfig
+make klipper3d-menuconfig
 ```
 
 ```bash
 # build everything
-$ make
+make
 ```
 
 Wifi
