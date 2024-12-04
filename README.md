@@ -1,3 +1,14 @@
+## Project buildroot-t113 with klipper3d
+===============
+
+Klipper is a 3d-Printer firmware. It combines the power of a general purpose computer with one or more micro-controllers.
+
+Buildroot is a simple, efficient and easy-to-use tool to generate embedded Linux systems through cross-compilation.
+
+*buildroot-t113* is a Buildroot external tree that provides the necessary configuation files to build Klipper as a Buildroot package.
+
+
+
 ## LCPI-PC T113s3
 ===============
 
