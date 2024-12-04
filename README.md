@@ -42,6 +42,7 @@ git clone https://github.com/buildroot/buildroot.git
 ```
 
 ```bash
+# change directory
 cd buildroot
 ```
 
@@ -71,8 +72,8 @@ make
 Edit board/lcpi/t113/overlay/etc/wpa_supplicant.conf or
 /etc/wpa_supplicant.conf once connected to the board:
 
-* Replace YOURSSID with your AP ssid
-* Replace YOURPASSWD with your AP password
+- Replace YOURSSID with your AP ssid
+- Replace YOURPASSWD with your AP password
 
 ## How to write the SD card
 ========================
@@ -85,6 +86,12 @@ Copy the bootable "sdcard.img" onto an SD card with "dd":
 ```bash
 sudo dd if=output/images/sdcard.img of=/dev/sdX
 ```
+
+## Connection instruction of debugging serial port
+==============================================
+
+Run Putty, according to the information in the device manager, fill in the correct serial port
+COM port, baud rate 115200, click open
 
 Connect a TTL UART to the UART3 on P2 header (unpopulated), pin PB7(RX), pin PB6(TX), insert the microSD card and
 plug in a USB-C cable to the OTG or HOST connector to boot the system.
