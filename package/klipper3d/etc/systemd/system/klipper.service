@@ -9,7 +9,10 @@ WantedBy=multi-user.target
 
 [Service]
 Type=simple
+User=root
 RemainAfterExit=yes
-ExecStart=/usr/bin/python /opt/klipper/klippy/klippy.py /opt/klipper/printer.cfg -l /tmp/klippy.log -a /tmp/klippy_uds
+WorkingDirectory=/opt/klipper
+EnviromentFile=/opt/printer_data/systemd/klipper.env
+ExecStart=/usr/bin/python $KLIPPER_ARGS
 Restart=always
 RestartSec=10

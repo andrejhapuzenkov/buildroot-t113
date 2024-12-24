@@ -1,5 +1,5 @@
   
-/tmp/klippy.log
+/opt/printer_data/logs/klippy.log
 {
     rotate 7
     daily
