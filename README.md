@@ -31,38 +31,45 @@ Board features:
 ## How to build
 ============
 
-```bash
 # get custom project
+
+```bash
 git clone https://github.com/andrejhapuzenkov/buildroot-t113.git
 ```
 
-```bash
 # get buildroot (skip if you have it already)
+
+```bash
 git clone https://github.com/buildroot/buildroot.git
 ```
 
-```bash
 # change directory
+
+```bash
 cd buildroot
 ```
 
-```bash
 # configure the external folder (do nothing, exit without saving)
+
+```bash
 make BR2_EXTERNAL=../buildroot-t113 menuconfig
 ```
 
-```bash
 # load Buildroot config
+
+```bash
 make t113_defconfig
 ```
 
-```bash
 # configure Klipper firmware
+
+```bash
 make klipper3d-menuconfig
 ```
 
-```bash
 # build everything
+
+```bash
 make
 ```
 
