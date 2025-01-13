@@ -28,7 +28,7 @@ if BR2_PACKAGE_KLIPPER3D
 
 config BR2_PACKAGE_KLIPPER3D_SRC_CONFIG
 	string "Klipper MCU kconfig file"
-	default "$(BR2_EXTERNAL)/package/klipper3d/klipper_default.config"
+	default "$(BR2_EXTERNAL)/package/klipper3d/klipper_f429.config"
 	help
 	  Provide a Klipper config file matching your 3D printing hardware or 
 	  run "make klipper3d-menuconfig".

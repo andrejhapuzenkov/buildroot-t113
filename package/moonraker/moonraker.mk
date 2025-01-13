@@ -14,10 +14,10 @@ define MOONRAKER_INSTALL_TARGET_CMDS
 	cp $(MOONRAKER_PKGDIR)/printer_data/systemd/moonraker.env  $(TARGET_DIR)/opt/printer_data/systemd
 endef
 
-#define MOONRAKER_INSTALL_INIT_SYSTEMD
-#	$(INSTALL) -D -m 0644 $(MOONRAKER_PKGDIR)/etc/systemd/system/moonraker.service \
-#		$(TARGET_DIR)/etc/systemd/system/moonraker.service
-#endef
+define MOONRAKER_INSTALL_INIT_SYSTEMD
+	$(INSTALL) -D -m 0644 $(MOONRAKER_PKGDIR)/etc/systemd/system/moonraker.service \
+		$(TARGET_DIR)/etc/systemd/system/moonraker.service
+endef
 
 #define MOONRAKER_USERS
 #	moonraker -1 moonraker -1 * - - - Moonraker daemon
