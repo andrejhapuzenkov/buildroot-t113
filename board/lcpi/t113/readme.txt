@@ -1,7 +1,7 @@
-LPPC T113s3
+LCPI-PC T113s3
 ===============
 
-LPPC T113s3 is a tiny ARM Cortex-A7 based single board computer.
+LCPI-PC T113s3 is a tiny ARM Cortex-A7 based single board computer.
 It's built around Allwinner T113-S3 dual core 1GHz CPU with integrated
 128MB DDR3-1600 RAM.
 Board features:
@@ -26,7 +26,7 @@ $ make
 Wifi
 ==========
 
-Edit board/lppc/t113/overlay/etc/wpa_supplicant.conf or
+Edit board/lcpi/t113/rootfs_overlay/etc/wpa_supplicant.conf or
 /etc/wpa_supplicant.conf once connected to the board:
 
 * Replace YOURSSID with your AP ssid

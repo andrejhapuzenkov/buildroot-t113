@@ -76,7 +76,7 @@ make
 ## Wifi
 ==========
 
-Edit board/lcpi/t113/overlay/etc/wpa_supplicant.conf or
+Edit board/lcpi/t113/rootfs_overlay/etc/wpa_supplicant.conf or
 /etc/wpa_supplicant.conf once connected to the board:
 
 - Replace YOURSSID with your AP ssid
