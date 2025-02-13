@@ -50,7 +50,7 @@ define KLIPPER3D_INSTALL_TARGET_CMDS
 	cp $(KLIPPER3D_PKGDIR)/etc/systemd/system/klipper.service  $(TARGET_DIR)/etc/systemd/system/
 	cp $(KLIPPER3D_PKGDIR)/printer_data/logs/klippy.log  $(TARGET_DIR)/opt/printer_data/logs
 	cp $(KLIPPER3D_PKGDIR)/printer_data/systemd/klipper.env  $(TARGET_DIR)/opt/printer_data/systemd
-	cp $(KLIPPER3D_PKGDIR)/klippy/extras/temperature_sensors.cfg  $(TARGET_DIR)/opt/klipper/klippy/extras/temperature_sensors.cfg
+#	cp $(KLIPPER3D_PKGDIR)/klippy/extras/temperature_sensors.cfg  $(TARGET_DIR)/opt/klipper/klippy/extras/temperature_sensors.cfg
 
 
 #	mkdir -p -m 0755 $(TARGET_DIR)/opt/klipper/out
