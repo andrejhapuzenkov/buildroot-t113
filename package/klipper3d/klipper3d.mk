@@ -60,6 +60,7 @@ define KLIPPER3D_INSTALL_TARGET_CMDS
 #		$(TARGET_DIR)/opt/klipper/out
 	
 	cp $(KLIPPER3D_PKGDIR)/printer_data/config/printer_xyz.cfg  $(TARGET_DIR)/opt/printer_data/config/printer.cfg
+	cp $(KLIPPER3D_PKGDIR)/printer_data/config/macros.cfg  $(TARGET_DIR)/opt/printer_data/config/macros.cfg
 
 endef
 
