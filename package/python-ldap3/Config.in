@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PYTHON_LDAP3
+	bool "python-ldap3"
+	help
+	  
+	  https://pypi.org/project/ldap3/

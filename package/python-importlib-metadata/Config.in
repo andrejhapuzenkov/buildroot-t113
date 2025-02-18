@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PYTHON_IMPORTLIB_METADATA
+	bool "python-importlib-metadata"
+	help
+	  
+	  https://pypi.org/project/importlib-metadata/

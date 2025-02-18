@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PYTHON_PREPROCESS_CANCELLATION
+	bool "python-preprocess-cancellation"
+	help
+	  
+	  https://pypi.org/project/preprocess_cancellation/
