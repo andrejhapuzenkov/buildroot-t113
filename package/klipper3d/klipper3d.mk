@@ -45,6 +45,8 @@ define KLIPPER3D_INSTALL_TARGET_CMDS
 	mkdir -p -m 0755 $(TARGET_DIR)/etc/systemd/system
 	mkdir -p -m 0755 $(TARGET_DIR)/opt/printer_data/logs
 	mkdir -p -m 0755 $(TARGET_DIR)/opt/printer_data/systemd
+	mkdir -p -m 0755 $(TARGET_DIR)/opt/printer_data/gcodes
+	mkdir -p -m 0755 $(TARGET_DIR)/opt/printer_data/comms
 
 
 	cp $(KLIPPER3D_PKGDIR)/etc/systemd/system/klipper.service  $(TARGET_DIR)/etc/systemd/system/
