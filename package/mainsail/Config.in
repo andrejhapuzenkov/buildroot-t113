@@ -1,0 +1,10 @@
+config BR2_PACKAGE_MAINSAIL
+	bool "mainsail"
+	
+	select BR2_PACKAGE_NGINX
+
+	help
+	  A modern and responsive user interface for Klipper.
+	  Control and monitor your printer from everywhere, from any device.
+	  https://github.com/mainsail-crew/mainsail.git
+	  
