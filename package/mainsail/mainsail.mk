@@ -11,6 +11,9 @@
 #MAINSAIL_SITE = $(call github,mainsail-crew,mainsail,$(MAINSAIL_VERSION))
 #https://github.com/mainsail-crew/mainsail/archive/refs/tags/v2.13.2.zip
 
+# TODO
+#$(@D)/mainsail
+#wget -O $(@D)/mainsail/mainsail.zip https://github.com/mainsail-crew/mainsail/releases/latest/download/mainsail.zip
 
 
 define MAINSAIL_INSTALL_TARGET_CMDS
@@ -26,6 +29,7 @@ define MAINSAIL_INSTALL_TARGET_CMDS
 	cp $(MAINSAIL_PKGDIR)/etc/mainsail  $(TARGET_DIR)/etc/nginx/sites-available/
 	cp $(MAINSAIL_PKGDIR)/etc/upstreams.conf  $(TARGET_DIR)/etc/nginx/conf.d/
 	cp $(MAINSAIL_PKGDIR)/etc/common_vars.conf  $(TARGET_DIR)/etc/nginx/conf.d/
+#	cp $(MAINSAIL_PKGDIR)/etc/nginx.conf  $(TARGET_DIR)/etc/nginx/
 endef
 
 
