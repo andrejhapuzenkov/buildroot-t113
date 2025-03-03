@@ -23,9 +23,9 @@ define MOONRAKER_INSTALL_INIT_SYSTEMD
 		$(TARGET_DIR)/etc/systemd/system/moonraker.service
 endef
 
-#define MOONRAKER_USERS
-#	moonraker -1 moonraker -1 * - - - Moonraker daemon
-#endef
+define MOONRAKER_USERS
+	moonraker -1 moonraker -1 * - - - Moonraker daemon
+endef
 
 
 $(eval $(generic-package))

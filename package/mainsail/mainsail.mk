@@ -29,7 +29,7 @@ define MAINSAIL_INSTALL_TARGET_CMDS
 	cp $(MAINSAIL_PKGDIR)/etc/mainsail  $(TARGET_DIR)/etc/nginx/sites-available/
 	cp $(MAINSAIL_PKGDIR)/etc/upstreams.conf  $(TARGET_DIR)/etc/nginx/conf.d/
 	cp $(MAINSAIL_PKGDIR)/etc/common_vars.conf  $(TARGET_DIR)/etc/nginx/conf.d/
-#	cp $(MAINSAIL_PKGDIR)/etc/nginx.conf  $(TARGET_DIR)/etc/nginx/
+	cp $(MAINSAIL_PKGDIR)/etc/nginx.conf  $(TARGET_DIR)/etc/nginx/
 endef
 
 
