@@ -1,1 +1,3 @@
+MOONRAKER_USER=root
+MOONRAKER_EXEC=/usr/bin/python
 MOONRAKER_ARGS="/opt/moonraker/moonraker/moonraker.py -d /opt/printer_data -l /opt/printer_data/logs/moonraker.log"

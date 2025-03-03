@@ -18,6 +18,12 @@ define MOONRAKER_INSTALL_TARGET_CMDS
 
 endef
 
+define MOONRAKER_INSTALL_INIT_SYSV
+#	mkdir -p -m 0755 $(TARGET_DIR)/etc/default
+	cp $(MOONRAKER_PKGDIR)/etc/default/moonraker $(TARGET_DIR)/etc/default
+	$(INSTALL) -m 0755 -D $(MOONRAKER_PKGDIR)/etc/init.d/S90moonraker $(TARGET_DIR)/etc/init.d
+endef
+
 define MOONRAKER_INSTALL_INIT_SYSTEMD
 	$(INSTALL) -D -m 0644 $(MOONRAKER_PKGDIR)/etc/systemd/system/moonraker.service \
 		$(TARGET_DIR)/etc/systemd/system/moonraker.service
