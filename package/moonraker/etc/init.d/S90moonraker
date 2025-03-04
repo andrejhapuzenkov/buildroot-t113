@@ -1,5 +1,5 @@
 #!/bin/sh
-# System startup script for Moonraker 3d-printer host code
+# System startup script for Moonraker - HTTP/Websocket API Server for Klipper
 
 ### BEGIN INIT INFO
 # Provides:          moonraker
