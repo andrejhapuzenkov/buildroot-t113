@@ -1,5 +1,0 @@
-config BR2_PACKAGE_PYTHON_SQLITE3PY
-	bool "python-sqlite3py"
-	help
-	  
-	  https://pypi.org/project/sqlite3py/
