@@ -3,6 +3,10 @@
 
 Klipper is a 3d-Printer firmware. It combines the power of a general purpose computer with one or more micro-controllers.
 
+Moonraker - API Web Server for Klipper. Moonraker is a Python 3 based web server that exposes APIs with which client applications may use to interact with the 3D printing firmware Klipper. Communication between the Klippy host and Moonraker is done over a Unix Domain Socket. Tornado is used to provide Moonraker's server functionality.
+
+Mainsail. Makes Klipper more accessible by adding a lightweight, responsive web user interface, centred around an intuitive and consistent design philosophy.
+
 Buildroot is a simple, efficient and easy-to-use tool to generate embedded Linux systems through cross-compilation.
 
 *buildroot-t113* is a Buildroot external tree that provides the necessary configuation files to build Klipper as a Buildroot package.
