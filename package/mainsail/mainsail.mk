@@ -30,18 +30,10 @@ define MAINSAIL_INSTALL_TARGET_CMDS
 	cp $(MAINSAIL_PKGDIR)/etc/upstreams.conf  $(TARGET_DIR)/etc/nginx/conf.d/
 	cp $(MAINSAIL_PKGDIR)/etc/common_vars.conf  $(TARGET_DIR)/etc/nginx/conf.d/
 	cp $(MAINSAIL_PKGDIR)/etc/nginx.conf  $(TARGET_DIR)/etc/nginx/
+
+	ln -sf /etc/nginx/sites-available/mainsail $(TARGET_DIR)/etc/nginx/sites-enabled/
+
 endef
-
-
-#define MOONRAKER_INSTALL_INIT_SYSTEMD
-#	$(INSTALL) -D -m 0644 $(MOONRAKER_PKGDIR)/etc/systemd/system/moonraker.service \
-#		$(TARGET_DIR)/etc/systemd/system/moonraker.service
-#endef
-
-#define MOONRAKER_USERS
-#	moonraker -1 moonraker -1 * - - - Moonraker daemon
-#endef
-
 
 $(eval $(generic-package))
 
