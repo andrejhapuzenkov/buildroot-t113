@@ -18,7 +18,7 @@
 
 define MAINSAIL_INSTALL_TARGET_CMDS
 
-	mkdir -p -m 0755 $(TARGET_DIR)/opt/mainsail
+	mkdir -p -m 0755 $(TARGET_DIR)/opt
 	mkdir -p -m 0755 $(TARGET_DIR)/etc/nginx/sites-available
 	mkdir -p -m 0755 $(TARGET_DIR)/etc/nginx/conf.d
 	mkdir -p -m 0755 $(TARGET_DIR)/etc/nginx/sites-enabled
@@ -26,10 +26,10 @@ define MAINSAIL_INSTALL_TARGET_CMDS
 #	cp -rf $(@D)/mainsail $(@D)/scripts $(TARGET_DIR)/opt/mainsail
 #	cp -rf $(@D)/mainsail $(TARGET_DIR)/opt/mainsail
 	cp -rf $(MAINSAIL_PKGDIR)/mainsail  $(TARGET_DIR)/opt
-	cp $(MAINSAIL_PKGDIR)/etc/mainsail  $(TARGET_DIR)/etc/nginx/sites-available/
-	cp $(MAINSAIL_PKGDIR)/etc/upstreams.conf  $(TARGET_DIR)/etc/nginx/conf.d/
-	cp $(MAINSAIL_PKGDIR)/etc/common_vars.conf  $(TARGET_DIR)/etc/nginx/conf.d/
-	cp $(MAINSAIL_PKGDIR)/etc/nginx.conf  $(TARGET_DIR)/etc/nginx/
+	cp $(MAINSAIL_PKGDIR)/etc/mainsail  $(TARGET_DIR)/etc/nginx/sites-available
+	cp $(MAINSAIL_PKGDIR)/etc/upstreams.conf  $(TARGET_DIR)/etc/nginx/conf.d
+	cp $(MAINSAIL_PKGDIR)/etc/common_vars.conf  $(TARGET_DIR)/etc/nginx/conf.d
+	cp $(MAINSAIL_PKGDIR)/etc/nginx.conf  $(TARGET_DIR)/etc/nginx
 
 	ln -sf /etc/nginx/sites-available/mainsail $(TARGET_DIR)/etc/nginx/sites-enabled/
 

@@ -18,12 +18,12 @@ KLIPPER3D_DEFAULT_FILE = $(TARGET_DIR)/etc/default/klipper
 KLIPPER3D_KCONFIG_FILE = $(call qstrip,$(BR2_PACKAGE_KLIPPER3D_SRC_CONFIG))
 KLIPPER3D_KCONFIG_DEPENDENCIES = host-arm-gnu-toolchain-old $(BR2_MAKE_HOST_DEPENDENCY)
 
-# Build Klipper src/ for uC (to be flashed later) 
+# Build Klipper src/ for uC (to be flashed later)
 # Build Klippy C code part of the CFFI stuff
 KLIPPER3D_MAKE_OPTS = CROSS_PREFIX=$(HOST_DIR)/bin/arm-none-eabi-
 KLIPPER3D_KLIPPY_MAKE_OPTS = DIR=$(@D)/klippy/chelper CC=$(TARGET_CC)
 
-define KLIPPER3D_BUILD_CMDS	
+define KLIPPER3D_BUILD_CMDS
 	$(BR2_MAKE) $(KLIPPER3D_MAKE_OPTS) -C $(@D)
 	$(BR2_MAKE) $(KLIPPER3D_KLIPPY_MAKE_OPTS) -C $(KLIPPER3D_PKGDIR)/klippy $(@D)/klippy/chelper/c_helper.so
 endef
@@ -49,18 +49,18 @@ define KLIPPER3D_INSTALL_TARGET_CMDS
 	mkdir -p -m 0755 $(TARGET_DIR)/opt/printer_data/comms
 
 
-	cp $(KLIPPER3D_PKGDIR)/etc/systemd/system/klipper.service  $(TARGET_DIR)/etc/systemd/system/
+	cp $(KLIPPER3D_PKGDIR)/etc/systemd/system/klipper.service  $(TARGET_DIR)/etc/systemd/system
 	cp $(KLIPPER3D_PKGDIR)/printer_data/logs/klippy.log  $(TARGET_DIR)/opt/printer_data/logs
 	cp $(KLIPPER3D_PKGDIR)/printer_data/systemd/klipper.env  $(TARGET_DIR)/opt/printer_data/systemd
-	cp $(KLIPPER3D_PKGDIR)/klippy/extras/temperature_sensors.cfg  $(TARGET_DIR)/opt/klipper/klippy/extras/temperature_sensors.cfg
-	cp $(KLIPPER3D_PKGDIR)/klippy/extras/ads1x1x.py  $(TARGET_DIR)/opt/klipper/klippy/extras/ads1x1x.py
+	cp -f $(KLIPPER3D_PKGDIR)/klippy/extras/temperature_sensors.cfg  $(TARGET_DIR)/opt/klipper/klippy/extras
+	cp -f $(KLIPPER3D_PKGDIR)/klippy/extras/ads1x1x.py  $(TARGET_DIR)/opt/klipper/klippy/extras
 
 
 
 #	mkdir -p -m 0755 $(TARGET_DIR)/opt/klipper/out
 #	cp $(@D)/out/klipper.bin $(@D)/out/klipper.elf $(@D)/out/klipper.dict $(@D)/out/compile_time_request.txt \
 #		$(TARGET_DIR)/opt/klipper/out
-	
+
 	cp $(KLIPPER3D_PKGDIR)/printer_data/config/printer_xyz.cfg  $(TARGET_DIR)/opt/printer_data/config/printer.cfg
 	cp $(KLIPPER3D_PKGDIR)/printer_data/config/macros.cfg  $(TARGET_DIR)/opt/printer_data/config/macros.cfg
 
