@@ -2,6 +2,7 @@ config BR2_PACKAGE_MOONRAKER
 	bool "moonraker"
 	
 	select BR2_PACKAGE_SSLH
+#	select BR2_PACKAGE_LSQLITE3
 	select BR2_PACKAGE_LIBSSH
 	select BR2_PACKAGE_LIBSSH2
 	select BR2_PACKAGE_LUA
