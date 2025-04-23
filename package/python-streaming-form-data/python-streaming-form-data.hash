@@ -1,4 +1,5 @@
 # md5, sha256 from https://pypi.org/project/streaming-form-data/1.12.0/#streaming-form-data-1.12.0.tar.gz
-md5 3bbbe90bfe91c5ec0a999a92407d4a04 streaming-form-data-1.12.0.tar.gz
-sha256 88842c33ab2ef75de1c1d86d989d22edcde8b335112dd8d5080b1cc7abe9c10c streaming-form-data-1.12.0.tar.gz
+#md5 3bbbe90bfe91c5ec0a999a92407d4a04 streaming-form-data-1.12.0.tar.gz
+md5 f5ebc217c67828601301b928346a044f streaming_form_data-1.19.1.tar.gz
+#sha256 88842c33ab2ef75de1c1d86d989d22edcde8b335112dd8d5080b1cc7abe9c10c streaming-form-data-1.12.0.tar.gz
 
