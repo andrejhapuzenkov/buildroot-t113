@@ -44,7 +44,7 @@ git clone https://github.com/andrejhapuzenkov/buildroot-t113.git
 Get buildroot (skip if you have it already):
 
 ```bash
-git clone https://github.com/buildroot/buildroot.git
+git clone --branch 2024.11.x https://github.com/buildroot/buildroot.git
 ```
 
 Change directory:
