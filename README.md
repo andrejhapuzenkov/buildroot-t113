@@ -30,7 +30,7 @@ Board features:
 - 24 pin DVP FPC connector
 - onboard mic
 - onboard audio amplifier
-- FEL,reset button
+- FEL, reset button
 
 ## How to build
 ============
