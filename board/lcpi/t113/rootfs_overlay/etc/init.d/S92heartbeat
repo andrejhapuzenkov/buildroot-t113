@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Starts Heartbeat leds
+#
+
+echo heartbeat > /sys/class/leds/blue:status/trigger
+
