@@ -5,11 +5,11 @@
 
 /dts-v1/;
 
-#include "sun8i-t113s.dtsi"
-#include "sunxi-d1s-t113-mangopi-mq-r.dtsi"
+#include "/home/aha/buildroot-t113/board/lcpi/t113/arch/arm/allwinner/sun8i-t113s.dtsi"
+#include "/home/aha/buildroot-t113/board/lcpi/t113/arch/arm/allwinner/sunxi-d1s-t113-mangopi-mq-r.dtsi"
 
 / {
-	model = "MangoPi MQ-R-T113";
+	model = "LCPI-T113";
 	compatible = "widora,mangopi-mq-r-t113", "allwinner,sun8i-t113s";
 
 	aliases {

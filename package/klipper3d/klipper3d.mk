@@ -6,7 +6,7 @@
 
 # TODO: add config to create default user if does not exists
 
-KLIPPER3D_VERSION = v0.12.0
+KLIPPER3D_VERSION = v0.13.0
 KLIPPER3D_SITE = $(call github,Klipper3d,klipper,$(KLIPPER3D_VERSION))
 KLIPPER3D_DEPENDENCIES = host-python-cffi
 

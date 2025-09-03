@@ -108,6 +108,14 @@
 	vcc-pg-supply = <&reg_3v3>;
 };
 
+
+&uart1 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart1_pg6_pins>;
+	status = "okay";
+};
+
+
 &uart3 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart3_pb_pins>;
