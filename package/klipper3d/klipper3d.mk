@@ -47,15 +47,18 @@ define KLIPPER3D_INSTALL_TARGET_CMDS
 	mkdir -p -m 0755 $(TARGET_DIR)/opt/printer_data/systemd
 	mkdir -p -m 0755 $(TARGET_DIR)/opt/printer_data/gcodes
 	mkdir -p -m 0755 $(TARGET_DIR)/opt/printer_data/comms
+	mkdir -p -m 0755 $(TARGET_DIR)/opt/klipper/config
+	mkdir -p -m 0755 $(TARGET_DIR)/opt/klipper/docs
+	mkdir -p -m 0755 $(TARGET_DIR)/opt/klipper/out
 
 
-	cp $(KLIPPER3D_PKGDIR)/etc/systemd/system/klipper.service  $(TARGET_DIR)/etc/systemd/system
-	cp $(KLIPPER3D_PKGDIR)/printer_data/logs/klippy.log  $(TARGET_DIR)/opt/printer_data/logs
-	cp $(KLIPPER3D_PKGDIR)/printer_data/systemd/klipper.env  $(TARGET_DIR)/opt/printer_data/systemd
+	cp -f $(KLIPPER3D_PKGDIR)/etc/systemd/system/klipper.service  $(TARGET_DIR)/etc/systemd/system
+	cp -f $(KLIPPER3D_PKGDIR)/printer_data/logs/klippy.log  $(TARGET_DIR)/opt/printer_data/logs
+	cp -f $(KLIPPER3D_PKGDIR)/printer_data/systemd/klipper.env  $(TARGET_DIR)/opt/printer_data/systemd
 	cp -f $(KLIPPER3D_PKGDIR)/klippy/extras/temperature_sensors.cfg  $(TARGET_DIR)/opt/klipper/klippy/extras
 	cp -f $(KLIPPER3D_PKGDIR)/klippy/extras/ads1x1x.py  $(TARGET_DIR)/opt/klipper/klippy/extras
-
-
+	cp -f $(@D)/out/klipper.bin  $(TARGET_DIR)/opt/klipper/out
+#	cp -f $(@D)/out/klipper.dict  $(TARGET_DIR)/opt/klipper/out
 
 #	mkdir -p -m 0755 $(TARGET_DIR)/opt/klipper/out
 #	cp $(@D)/out/klipper.bin $(@D)/out/klipper.elf $(@D)/out/klipper.dict $(@D)/out/compile_time_request.txt \

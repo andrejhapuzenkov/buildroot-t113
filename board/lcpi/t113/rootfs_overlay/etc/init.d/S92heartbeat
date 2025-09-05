@@ -4,4 +4,4 @@
 #
 
 echo heartbeat > /sys/class/leds/blue:status/trigger
-
+stty -F /dev/ttyS1 115200
