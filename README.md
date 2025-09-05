@@ -106,3 +106,15 @@ COM port, baud rate 115200, click open.
 
 Connect a TTL UART to the UART3 on P2 header (unpopulated), pin PB7(RX), pin PB6(TX), insert the microSD card and
 plug in a USB-C cable to the OTG or HOST connector to boot the system.
+
+## Connecting to the printer control board
+==============================================
+
+The UART1-TX pin PG6 and UART1-RX pin PG7 ports are used to connect to the printer control board.
+Baud rate 115200.
+
+Viewing parameters:
+
+```bash
+stty -F /dev/ttyS0 -a
+```
