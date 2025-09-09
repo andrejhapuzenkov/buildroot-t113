@@ -52,20 +52,21 @@ define KLIPPER3D_INSTALL_TARGET_CMDS
 	mkdir -p -m 0755 $(TARGET_DIR)/opt/klipper/out
 
 
-	cp -f $(KLIPPER3D_PKGDIR)/etc/systemd/system/klipper.service  $(TARGET_DIR)/etc/systemd/system
-	cp -f $(KLIPPER3D_PKGDIR)/printer_data/logs/klippy.log  $(TARGET_DIR)/opt/printer_data/logs
-	cp -f $(KLIPPER3D_PKGDIR)/printer_data/systemd/klipper.env  $(TARGET_DIR)/opt/printer_data/systemd
-	cp -f $(KLIPPER3D_PKGDIR)/klippy/extras/temperature_sensors.cfg  $(TARGET_DIR)/opt/klipper/klippy/extras
-	cp -f $(KLIPPER3D_PKGDIR)/klippy/extras/ads1x1x.py  $(TARGET_DIR)/opt/klipper/klippy/extras
-	cp -f $(@D)/out/klipper.bin  $(TARGET_DIR)/opt/klipper/out
-#	cp -f $(@D)/out/klipper.dict  $(TARGET_DIR)/opt/klipper/out
+	cp -rf $(KLIPPER3D_PKGDIR)/etc/systemd/system/klipper.service  $(TARGET_DIR)/etc/systemd/system
+	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/logs/klippy.log  $(TARGET_DIR)/opt/printer_data/logs
+	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/systemd/klipper.env  $(TARGET_DIR)/opt/printer_data/systemd
+	cp -rf $(KLIPPER3D_PKGDIR)/klippy/extras/temperature_sensors.cfg  $(TARGET_DIR)/opt/klipper/klippy/extras
+	cp -rf $(KLIPPER3D_PKGDIR)/klippy/extras/ads1x1x.py  $(TARGET_DIR)/opt/klipper/klippy/extras
+	cp -rf $(@D)/out/klipper.bin  $(TARGET_DIR)/opt/klipper/out
+#	cp -rf $(@D)/out/klipper.dict  $(TARGET_DIR)/opt/klipper/out
 
 #	mkdir -p -m 0755 $(TARGET_DIR)/opt/klipper/out
 #	cp $(@D)/out/klipper.bin $(@D)/out/klipper.elf $(@D)/out/klipper.dict $(@D)/out/compile_time_request.txt \
 #		$(TARGET_DIR)/opt/klipper/out
 
-	cp $(KLIPPER3D_PKGDIR)/printer_data/config/printer_xyz.cfg  $(TARGET_DIR)/opt/printer_data/config/printer.cfg
-	cp $(KLIPPER3D_PKGDIR)/printer_data/config/macros.cfg  $(TARGET_DIR)/opt/printer_data/config/macros.cfg
+	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/config/printer_xyz.cfg  $(TARGET_DIR)/opt/printer_data/config/printer.cfg
+	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/config/printerG3.cfg  $(TARGET_DIR)/opt/printer_data/config
+	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/config/macros.cfg  $(TARGET_DIR)/opt/printer_data/config/macros.cfg
 
 endef
 
