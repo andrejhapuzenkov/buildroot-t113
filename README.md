@@ -116,5 +116,5 @@ Baud rate 115200.
 Viewing parameters:
 
 ```bash
-stty -F /dev/ttyS0 -a
+stty -F /dev/ttyS1 -a
 ```
