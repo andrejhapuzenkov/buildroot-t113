@@ -111,7 +111,7 @@ plug in a USB-C cable to the OTG or HOST connector to boot the system.
 ==============================================
 
 The UART1-TX pin PG6 and UART1-RX pin PG7 ports are used to connect to the printer control board.
-Baud rate 115200.
+Baud rate 250000.
 
 Viewing parameters:
 
