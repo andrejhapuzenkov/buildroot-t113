@@ -64,8 +64,8 @@ define KLIPPER3D_INSTALL_TARGET_CMDS
 #	cp $(@D)/out/klipper.bin $(@D)/out/klipper.elf $(@D)/out/klipper.dict $(@D)/out/compile_time_request.txt \
 #		$(TARGET_DIR)/opt/klipper/out
 
-	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/config/printer_xyz.cfg  $(TARGET_DIR)/opt/printer_data/config/printer.cfg
-	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/config/printerG3.cfg  $(TARGET_DIR)/opt/printer_data/config
+	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/config/printer_xyz.cfg  $(TARGET_DIR)/opt/printer_data/config
+	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/config/printerG3.cfg  $(TARGET_DIR)/opt/printer_data/config/printer.cfg
 	cp -rf $(KLIPPER3D_PKGDIR)/printer_data/config/macros.cfg  $(TARGET_DIR)/opt/printer_data/config/macros.cfg
 
 endef
